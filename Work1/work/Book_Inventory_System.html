@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ระบบจัดการหนังสือ</title>
+    <script>
+      let books = [];
+      function addBook() {
+        let bookName = document.getElementById("book-name").value;
+        let author = document.getElementById("author").value;
+        let price = document.getElementById("price").value;
+        let book = {
+          bookName: bookName,
+          bookAuthor: author,
+          bookPrice: price,
+        };
+        books.push(book);
+        displayBooks();
+      }
+      function displayBooks() {
+        let bookLists = document.getElementById("book-lists");
+        bookLists.innerHTML = "";
+        books.forEach((book, index) => {
+          bookLists.innerHTML += `<p>${book.bookName} โดย ${book.bookAuthor} - ฿${book.bookPrice} <button onclick="deleteBook(${index})">ลบ</button></p>`;
+        });
+      }
+      function deleteBook(index) {
+        books.splice(index, 1);
+        displayBooks();
+      }
+    </script>
+  </head>
+  <body>
+    <h1>ระบบจัดการหนังสือ</h1>
+    <p><strong>โปรแกรมเมอร์: ปฏิวัฒน์ กฤษฏิ์สุภารัตน์</strong></p>
+    <hr />
+    <label for="book-name">ชื่อหนังสือ: </label>
+    <input type="text" id="book-name" title="book-name" /><br />
+    <label for="author">ชื่อผู้แต่ง: </label>
+    <input type="text" id="author" title="author" /><br />
+    <label for="price">ราคา: </label>
+    <input type="number" id="price" title="price" /><br />
+    <button type="submit" onclick="addBook()">เพิ่มจำนวน</button>
+
+    <h2>รายการหนังสือ</h2>
+    <p id="book-lists"></p>
+  </body>
+</html>

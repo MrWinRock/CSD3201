@@ -7,17 +7,16 @@
   </head>
   <body>
     <h1>API Data Fetch</h1>
+    <p><strong>โปรแกรมเมอร์: ปฏิวัฒน์ กฤษฏิ์สุภารัตน์</strong></p>
     <p id="api-data">Fetching data...</p>
-
     <script>
       const apiUrl = "https://jsonplaceholder.typicode.com/posts/1";
-
       fetch(apiUrl)
         .then((response) => response.json())
         .then((data) => {
           document.getElementById(
             "api-data"
-          ).innerText = `Title: ${data.title}`;
+          ).innerText = `Title: ${data.title} \n\nBody: ${data.body}`;
         })
         .catch((error) => {
           document.getElementById("api-data").innerText = `Error: ${error}`;

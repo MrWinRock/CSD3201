@@ -15,15 +15,14 @@
   </head>
   <body>
     <h1>เกมทายหมายเลข</h1>
-    ทายหมายเลข (1-100): <input type="number" id="guess-input" />
+    <p><strong>โปรแกรมเมอร์: ปฏิวัฒน์ กฤษฏิ์สุภารัตน์</strong></p>
+    <label for="guess-input">ทายหมายเลข (1-100): </label>
+    <input type="number" id="guess-input" />
     <button id="guess-btn">ทาย</button>
-
     <div id="result"></div>
-
     <script>
       let randomNumber = Math.floor(Math.random() * 100) + 1;
 
-      // Function Declaration to check guess
       function checkGuess() {
         const guess = parseInt(document.getElementById("guess-input").value);
         let resultText = "";
@@ -36,8 +35,6 @@
         }
         document.getElementById("result").innerText = resultText;
       }
-
-      // Anonymous Function for button click event
       document.getElementById("guess-btn").onclick = function () {
         checkGuess();
       };

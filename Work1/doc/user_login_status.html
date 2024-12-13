@@ -7,12 +7,11 @@
   </head>
   <body>
     <h1>User Login Status</h1>
+    <p><strong>โปรแกรมเมอร์: ปฏิวัฒน์ กฤษฏิ์สุภารัตน์</strong></p>
     <p id="login-status">User logged out</p>
     <button onclick="toggleLogin()">Toggle Login</button>
-
     <script>
       var isLoggedIn = false;
-
       function toggleLogin() {
         isLoggedIn = !isLoggedIn;
         document.getElementById("login-status").innerText = isLoggedIn

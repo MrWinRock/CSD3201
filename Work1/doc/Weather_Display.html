@@ -15,17 +15,15 @@
   </head>
   <body>
     <h1>เช็คสภาพอากาศ</h1>
+    <p><strong>โปรแกรมเมอร์: ปฏิวัฒน์ กฤษฏิ์สุภารัตน์</strong></p>
     เมือง: <input type="text" id="city-input" placeholder="กรุณาใส่ชื่อเมือง" />
     <button id="get-weather-btn">ดูสภาพอากาศ</button>
-
     <div id="weather"></div>
-
     <script>
       document.getElementById("get-weather-btn").onclick = function () {
         const city = document.getElementById("city-input").value;
         const apiKey = "f0aac54e7b20ff111fd706a69f8cd87b"; // ใส่ API Key ของคุณที่นี่
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
         fetch(url)
           .then((response) => response.json())
           .then((data) => {

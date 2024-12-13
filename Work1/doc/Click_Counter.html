@@ -16,12 +16,11 @@
   </head>
   <body>
     <h1>โปรแกรมนับจำนวนคลิก</h1>
+    <p><strong>โปรแกรมเมอร์: ปฏิวัฒน์ กฤษฏิ์สุภารัตน์</strong></p>
     <button id="click-btn">คลิกที่นี่!</button>
     <div id="counter">จำนวนคลิก: 0</div>
-
     <script>
       let count = 0;
-
       document.getElementById("click-btn").onclick = function () {
         count++;
         document.getElementById("counter").innerHTML = "จำนวนคลิก: " + count;

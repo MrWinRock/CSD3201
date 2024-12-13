@@ -7,12 +7,11 @@
   </head>
   <body>
     <h1>Membership Status</h1>
+    <p><strong>โปรแกรมเมอร์: ปฏิวัฒน์ กฤษฏิ์สุภารัตน์</strong></p>
     <p id="status-display">You are not a member.</p>
     <button onclick="toggleMembership()">Toggle Membership</button>
-
     <script>
       let isMember = false;
-
       function toggleMembership() {
         isMember = !isMember;
         document.getElementById("status-display").innerText = isMember
