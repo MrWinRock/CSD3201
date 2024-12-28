@@ -1,4 +1,4 @@
-import { StyleSheet, TextComponent } from "react-native";
+import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
     borderColor: "#ddd",
     borderRadius: 10,
     marginVertical: 20,
+    elevation1: 3,
   },
   programTitle: {
     fontSize: 20,
@@ -110,9 +111,9 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     padding: 20,
-    width: "100%",
     margin: "auto",
     alignItems: "center",
+    justifyContent: "center",
   },
   imageBackground: {
     width: 300,
@@ -126,7 +127,7 @@ const styles = StyleSheet.create({
     height: 200,
     marginBottom: 20,
   },
-  imageText: {
+  nameText: {
     fontSize: 18,
     color: "#222",
   },
@@ -136,6 +137,52 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     backgroundColor: "rgba(0, 0, 0, 0.5)",
     padding: 5,
+  },
+  buttonContainer: {
+    padding: 20,
+    backgroundColor: "#f0f8ff",
+    alignItems: "center",
+  },
+  customButton: {
+    padding: 15,
+    borderRadius: 5,
+    alignItems: "center",
+    marginVertical: 10,
+  },
+  buttonText: {
+    color: "white",
+    fontSize: 16,
+  },
+  scrollContainer: {
+    padding: 20,
+    alignItems: "center",
+  },
+  textItem: {
+    fontSize: 16,
+    marginVertical: 5,
+  },
+  horizontalContent: {
+    flexDirection: "row",
+  },
+  horizontalItem: {
+    fontSize: 16,
+    marginHorizontal: 10,
+    padding: 10,
+    backgroundColor: "#f0f0f0",
+    borderRadius: 5,
+  },
+  input: {
+    width: "80%",
+    height: 40,
+    borderColor: "#ccc",
+    borderWidth: 1,
+    paddingHorizontal: 10,
+    marginBottom: 15,
+    borderRadius: 5,
+  },
+  output: {
+    fontSize: 16,
+    marginBottom: 20,
   },
 });
 

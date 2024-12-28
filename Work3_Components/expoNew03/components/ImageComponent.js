@@ -12,13 +12,13 @@ const ImageComponent = () => {
   const [loading, setLoading] = useState(true);
 
   return (
-    <View contentContainerStyle={styles.imageContainer}>
+    <View style={styles.imageContainer}>
       <Image
         source={require("../assets/local-image.png")}
         style={styles.image}
       />
 
-      <Text style={styles.imageText}>Remote Image Example</Text>
+      <Text style={styles.nameText}>Remote Image Example</Text>
       <Image
         source={{
           uri: "https://i.pinimg.com/736x/87/d3/eb/87d3ebd45e7a220c07b930f898c570a3.jpg",
@@ -26,7 +26,7 @@ const ImageComponent = () => {
         style={styles.image}
       />
 
-      <Text style={styles.imageText}>Image Background Example</Text>
+      <Text style={styles.nameText}>Image Background Example</Text>
       <ImageBackground
         source={{
           uri: "https://t3.ftcdn.net/jpg/00/57/08/46/360_F_57084608_ciyjhtwgdKSjeZwhDTNDyuMdWik8gNF9.jpg",
@@ -36,7 +36,7 @@ const ImageComponent = () => {
         <Text style={styles.overlayText}>Hello on Background!</Text>
       </ImageBackground>
 
-      <Text style={styles.imageText}>Placeholder Image Example</Text>
+      <Text style={styles.nameText}>Placeholder Image Example</Text>
       {loading && <ActivityIndicator size="large" color="#0000ff" />}
       <Image
         source={{
