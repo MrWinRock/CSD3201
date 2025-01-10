@@ -1,10 +1,9 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-
-export default function ProfileScreen() {
+export default function DetailsScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Profile Screen</Text>
+      <Text style={styles.title}>Details Screen</Text>
     </View>
   );
 }
