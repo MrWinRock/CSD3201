@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import {
   DrawerContentScrollView,
   DrawerItemList,
@@ -8,24 +8,12 @@ export default function CustomDrawerContent(props) {
   return (
     <DrawerContentScrollView {...props}>
       <View style={styles.header}>
-        <Image
-          source={{
-            uri: "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png",
-          }}
-          style={styles.profileImage}
-        />
         <Text style={styles.userName}>Pharthiwath</Text>
         <Text style={styles.userEmail}>s65122250031@ssru.ac.th</Text>
       </View>
       <View style={styles.menuSection}>
         <DrawerItemList {...props} />
       </View>
-      <TouchableOpacity
-        style={styles.logoutButton}
-        onPress={() => handleLogout(props)}
-      >
-        <Text style={styles.logoutText}>Logout</Text>
-      </TouchableOpacity>
     </DrawerContentScrollView>
   );
 }
@@ -39,7 +27,7 @@ function handleLogout(props) {
 }
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: "#6200ee",
+    backgroundColor: "#7ab2d3",
     padding: 16,
     alignItems: "center",
   },

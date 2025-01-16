@@ -1,22 +1,20 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Dashboard from "../fitness/Dashboard";
-import Workouts from "../fitness/Workouts";
-import Profile from "../fitness/Profile";
+import Home from "../ecommerce/Home";
+import Profile from "../ecommerce/Profile";
+import HybridStackNavigator from "./HybridStackNavigator";
 import { Ionicons } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
-export default function TabNavigator() {
+export default function HybridTabNavigator() {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
 
-          if (route.name === "Dashboard") {
-            iconName = focused ? "desktop" : "desktop-outline";
-          } else if (route.name === "Workouts") {
-            iconName = focused ? "barbell" : "barbell-outline";
+          if (route.name === "Home") {
+            iconName = focused ? "home" : "home-outline";
           } else if (route.name === "Profile") {
             iconName = focused ? "person" : "person-outline";
           }
@@ -26,10 +24,10 @@ export default function TabNavigator() {
 
         tabBarActiveTintColor: "#3c6ca5",
         tabBarInactiveTintColor: "gray",
+        headerShown: false,
       })}
     >
-      <Tab.Screen name="Dashboard" component={Dashboard} />
-      <Tab.Screen name="Workouts" component={Workouts} />
+      <Tab.Screen name="Home" component={HybridStackNavigator} />
       <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
   );

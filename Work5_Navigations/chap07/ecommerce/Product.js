@@ -1,18 +1,17 @@
 import React from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
 
-export default function DetailsScreen({ route, navigation }) {
-  const { itemId, itemName, itemAuthor } = route.params;
+export default function Product({ route, navigation }) {
+  const { name, price } = route.params;
 
   return (
     <View style={styles.container}>
       <View style={styles.card}>
-        <Text style={styles.title}>{itemName}</Text>
-        <Text style={styles.text}>Author: {itemAuthor}</Text>
-        <Text style={styles.text}>ID: {itemId}</Text>
+        <Text style={styles.title}>{name}</Text>
+        <Text style={styles.text}>฿ {price}</Text>
         <Button
           title="Go to Home"
-          color={"#186b50"}
+          color={"#3c6ca5"}
           onPress={() =>
             navigation.reset({
               index: 0,

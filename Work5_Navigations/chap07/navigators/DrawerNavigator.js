@@ -1,13 +1,18 @@
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import TabNavigator from "./TabNavigator";
-import SettingsScreen from "../features/settings/SettingsScreen";
+import Home from "../travel/Home";
+import Hotels from "../travel/Hotels";
+import Flights from "../travel/Flights";
+import CustomDrawerContent from "../components/CustomDrawerContent";
 const Drawer = createDrawerNavigator();
 export default function DrawerNavigator() {
   return (
-    <Drawer.Navigator>
-      <Drawer.Screen name="Tabs" component={TabNavigator} />
-      <Drawer.Screen name="Settings" component={SettingsScreen} />
+    <Drawer.Navigator
+      drawerContent={(props) => <CustomDrawerContent {...props} />}
+    >
+      <Drawer.Screen name="Home" component={Home} />
+      <Drawer.Screen name="Hotels" component={Hotels} />
+      <Drawer.Screen name="Flights" component={Flights} />
     </Drawer.Navigator>
   );
 }
